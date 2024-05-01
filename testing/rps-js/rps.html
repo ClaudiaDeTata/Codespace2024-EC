@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>RPS Game</title>
+      <style>
+        .choices {
+          display: flex;
+          justify-content: center;
+        }  
+      </style>
+    </head>
+    <body>
+      <!-- Buttons -->
+      <div class="choices">
+          <button id="rock">Rock</button>
+          <button id="paper">Paper</button>
+          <button id="scissors">Scissors</button>
+      </div>
+      <br>
+      <h2>Your Choice: <span id="user-choice"></span></h2>
+      <h2>Computer Choice: <span id="computer-choice"></span></h2>
+      <h2>Result: <span id="result"></span></h2>
+
+      <script>
+          // get the buttons
+          const rockBtn = document.getElementById("rock");
+          const paperBtn = document.getElementById("paper");
+          const scissorsBtn = document.getElementById("scissors");
+          
+          // get the spans
+          const userChoiceSpan = document.getElementById("user-choice");
+          const computerChoiceSpan = document.getElementById("computer-choice");
+          const resultSpan = document.getElementById("result");
+          
+          // define the options
+          const options = ["rock", "paper", "scissors"];
+
+          // add event listeners to buttons
+          rockBtn.addEventListener("click", function() {
+            // call the playGame function and pass on the value of the button
+            console.log(options[0]);
+            playGame(options[0]);
+          });
+
+          paperBtn.addEventListener("click", function() {
+            console.log(options[1]);
+            playGame(options[1]);
+          });
+
+          scissorsBtn.addEventListener("click", function() {
+            console.log(options[2]);
+            playGame(options[2]);
+          });
+
+          // play the game
+          function playGame(userChoice){
+            console.log(userChoice);
+
+            // user move
+            userChoiceSpan.innerHTML = userChoice;
+
+            // get computer move
+            const computerChoice = options[Math.floor(Math.random() * options.length)];
+            console.log(computerChoice);
+
+            // set computer move
+            computerChoiceSpan.innerHTML = computerChoice;
+            
+            // compare the options
+            // tie
+            if (userChoice === computerChoice) {
+              resultSpan.innerHTML = "it's a tie!"
+            } 
+            // user wins
+            else if (userChoice === "rock" && computerChoice === "scissors") {
+              resultSpan.innerHTML = "you win!"
+            } 
+            else if (userChoice === "paper" && computerChoice === "rock") {
+              resultSpan.innerHTML = "you win!"
+            } 
+            else if (userChoice === "scissors" && computerChoice === "paper") {
+              resultSpan.innerHTML = "you win!"
+            } 
+            // user loose
+            else {
+              resultSpan.innerHTML = "you loose!"
+            }
+          };
+          
+      </script>
+    </body>
+</html>
