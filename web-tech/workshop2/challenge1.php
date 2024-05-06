@@ -36,6 +36,8 @@ Division of 10 and 5 is: 2
 Concatenation of 10 and 5 is: 105*/
 ?>
 
+<br>
+
 <?php
 
 $number1 = 10;
@@ -93,6 +95,8 @@ $concatenated = $number1 . "" . $number2;
 echo "Concatenation of " . $number1 . " and " . $number2 . " is: " . $concatenated;
 
 ?>
+<br>
+<br>
 
 <?php
 // 3.
