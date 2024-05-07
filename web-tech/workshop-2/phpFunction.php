@@ -17,7 +17,7 @@ Output
     function replaceVowelsWithX($str)
 
      { 
-      // array definition  
+      // array definition
       $vowels = array ("a", "e", "i", "o", "u", "A", "E", "I", "O", "U");
       // str_replace() function
       $result = str_replace($vowels,"x", $str);

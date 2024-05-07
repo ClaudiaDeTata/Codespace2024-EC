@@ -35,6 +35,7 @@
   <button id="calculateResult">Calculate</button>
   <p id="result"></p>
   <?php
+  
 // Check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["addText"])) {
     // Add the line of text

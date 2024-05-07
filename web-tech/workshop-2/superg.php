@@ -36,7 +36,7 @@
 
     // $_ENV[""]  // environment variable - very sensitive data
 
-    // $_GLOBAL[""]   // access variable 
+    // $_GLOBAL[""]  // access variable 
 
     ?>
 </body>

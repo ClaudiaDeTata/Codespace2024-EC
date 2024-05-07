@@ -37,14 +37,20 @@ class User {
     }
 }
 
-// creating instances and setting values user1
+// creating instances and setting values user1 (object)
 let user1 = new User("John", "Doe");
+
+// print first and last name user1
+console.log(`${user1.firstName} ${user1.lastName}`);
 
 // accessing properties
 user1.hello();
 
-// creating instances and setting values user2
+// creating instances and setting values user2 (object)
 let user2 = new User("Jane", "Doe");
+
+// print first and last name user2
+console.log(`${user2.firstName} ${user2.lastName}`);
 
 // accessing properties
 user2.hello();

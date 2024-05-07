@@ -62,7 +62,6 @@
             default:
                echo "<p class='calc-error'>Something went wrong!</p>";
      }
-
      echo "<p class='calc-result'>Result = " . $value . "</p>";
   }
 

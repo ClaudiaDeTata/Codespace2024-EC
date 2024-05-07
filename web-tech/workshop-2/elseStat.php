@@ -4,7 +4,7 @@ Next create a script that checks the value of $age and displays a message based 
 
 -  If the value of $age is between 13 and 17, it displays "You are a teenager."
 
--  If the value of $age is between 18 and 64, it displays "You are an adult."
+- If the value of $age is between 18 and 64, it displays "You are an adult."
 
 -  If none of the above conditions are met, it displays "You are a senior citizen." */
 

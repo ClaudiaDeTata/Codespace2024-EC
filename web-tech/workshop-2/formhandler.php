@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($firstname)) {
         exit();
-        header("Location: form.php"); 
+        header("Location: form.php");
     }
 
     echo "These are the data that the user submitted:";

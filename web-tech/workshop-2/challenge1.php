@@ -4,7 +4,6 @@
 Next, create a third variable called $area, and assign it the value of $width multiplied by $height.
 Finally, print out a string that includes the value of $width, $height, and $area in a sentence.
 
-
 Output
 
 The rectangle has a width of 10 meters, a height of 5 meters, and an area of 50 square meters.*/

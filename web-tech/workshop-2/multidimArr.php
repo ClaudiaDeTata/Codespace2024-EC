@@ -9,7 +9,7 @@
 <!-- Create and initialise an array variable using a suitable variable name to display the following of student’s results:
 Name                    Physics           English       Maths
 
-Aarron                    74%                 69%            70%
+Aarron                  74%                 69%            70%
 
 Jamie                      64%                 79%            69%
 

@@ -35,6 +35,7 @@ You may also need to use string concatenation (. operator) to combine the differ
   <title>For Loop PHP</title>
 </head>
 <body>
+  
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
       <input type="number" name="number"
       placeholder="Type your number" required>
