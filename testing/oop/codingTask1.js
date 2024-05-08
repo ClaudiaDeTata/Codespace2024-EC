@@ -27,6 +27,7 @@ hello, Jane Doe */
 // declaring the class and its properties
 class User {
     constructor(firstName, lastName) {
+        // initialise variables
       this.firstName = firstName;
       this.lastName = lastName;
    }
@@ -38,9 +39,9 @@ class User {
 }
 
 // creating instances and setting values user1 (object)
-let user1 = new User("John", "Doe");
+const user1 = new User("John", "Doe");
 
-// print first and last name user1
+// print first and last name user1 for debug
 console.log(`${user1.firstName} ${user1.lastName}`);
 
 // accessing properties
@@ -49,7 +50,7 @@ user1.hello();
 // creating instances and setting values user2 (object)
 let user2 = new User("Jane", "Doe");
 
-// print first and last name user2
+// print first and last name user2 for debug
 console.log(`${user2.firstName} ${user2.lastName}`);
 
 // accessing properties

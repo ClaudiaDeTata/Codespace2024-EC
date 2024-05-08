@@ -31,16 +31,11 @@ My name is firstName lastSurname */
 // encapsulation
 // declaring the class and its properties
 class User {
-  constructor(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
+  constructor() { // not assigning values at the beginning to be able to change them later
+    // initialise variables
+    this._firstName = "";
+    this._lastName = "";
  }
-
-// method
-hello() {
-  console.log("Hello World!");
-  console.log("My name is", this.firstName, this.lastName)
-  }  
 
   // getter method to retrieve first and last name
   get firstName() {
@@ -52,6 +47,7 @@ hello() {
   }
 
   // setter method to set a new value for first and last name
+  // overriding initial value
   set firstName(firstName) {
     this._firstName = firstName;
   }
@@ -59,10 +55,22 @@ hello() {
   set lastName(lastName) {
     this._lastName = lastName;
   }
-};
+
+  // method
+  hello() {
+    return "Hello World!";
+  }  
+}
 
 // object representing User class
-const user = new User('firstName', 'lastName');
+const user = new User();
 
 // method invocation
-user.hello();
+user.firstName = "John";
+user.lastName = "Doe";
+
+// use the getters to retrieve firstName and lastName
+let fullName = user.firstName + " " + user.lastName;
+
+console.log(user.hello());
+console.log("My name is " + fullName);
