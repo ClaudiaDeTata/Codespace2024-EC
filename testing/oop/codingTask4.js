@@ -4,7 +4,7 @@
 class User {
   constructor() {
     // initializing with 0 articles
-    this.numberOfArticles = 0;
+    this._numberOfArticles = 0;
   }
 
    // getter method to retrieve the value of nOA
@@ -19,20 +19,32 @@ class User {
 
   // method 
   calcScores() {
-    return 0;
+    // placeholder that reminds the method needs to be implemented in subclasses
+    throw new Error("Method must be implemented in the subclasses.");
   }
 };
 
-// creating class Author that inherits User
+// creating Author class that inherits from User
 class Author extends User {
+  // class constructor
+  constructor(){
+    // calling super class constructor
+    super();
+  }
   // method ovverride
   calcScores() {
+    // nOA from get method
     return this.numberOfArticles * 10 + 20 ;
-  };
+  }
 };
 
-// creating class Editor that inherits User
+// creating Editor class that inherits from User
 class Editor extends User {
+  // class constructor
+  constructor(){
+    // calling super class constructor
+    super();
+  }
   // method ovverride
   calcScores() {
     return this.numberOfArticles * 6 + 15 ;
@@ -44,7 +56,7 @@ const author = new Author();
 // setter method used to change the number of articles for author 
 author.numberOfArticles = 8;
 
-// output
+// output 100
 console.log("Author:", author.calcScores());
 
 // create instance of author
@@ -52,6 +64,6 @@ const editor = new Editor();
 // setter method used to change the number of articles for editor
 editor.numberOfArticles = 15;
 
-// output
+// output 105
 console.log("Editor:", editor.calcScores());
 

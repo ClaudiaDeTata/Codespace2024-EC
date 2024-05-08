@@ -3,13 +3,15 @@
 // abstract class User
 class User {
   // constructor with username initialisation and 
-  constructor(username) {
-    this.username = username;
+  constructor() {
+    // check if attemptis made to instantiate the abstract class directly
+    if (this.constructor === User) {
+     throw new Error("Cannot instantiate abstract class");
+    }
+    //initialise variables
+    this._username = "";
   }
-  // abstract method
-  stateYourRole() {
-  }
-
+  
   // getter method to retrive the value of username
   get username() {
     return this._username;
@@ -19,16 +21,22 @@ class User {
   set username(username) {
     this._username = username;
   }
+
+  // abstract method
+  stateYourRole() {
+    // placeholder that reminds the method needs to be implemented in subclasses
+    throw new Error("Method must be implemented in the subclasses.");
+  }
 }
 
 // admin class inheriting User class
 class Admin extends User {
   // constructor
-  constructor(username) {
+  constructor() {
     // call the parent class constructor
-    super(username);
+    super();
   }
-    // method
+    // method override
     stateYourRole() {
       return "Admin";
     }
@@ -37,9 +45,9 @@ class Admin extends User {
 // viewer class inheriting User class
 class Viewer extends User {
   // constructor
-  constructor(username) {
+  constructor() {
     // call the parent class constructor
-    super(username);
+    super();
   }
     // method
     stateYourRole() {
@@ -47,14 +55,22 @@ class Viewer extends User {
     }
   }
 
-// creating an admin instance
-// passing username as an argument
-let admin = new Admin("Balthazar");
-// output
-console.log(`Username: ${admin.username}. Role: ${admin.stateYourRole()}`);
+// create an object from the User class
+// const user = new User();
+// user.stateYouRole();
 
-// creating a viewer instance
-// passing username as an argument
-let viewer = new Viewer("Melchior");
+// creating an admin object from the Admin class
+const admin = new Admin();
+// set a username
+admin.username = "Balthazar";
+// output
+console.log("Username: ", admin.username);
+console.log("Role: ", admin.stateYourRole());
+
+// creating a viewer object from the Viewer class
+const viewer = new Viewer();
+// set a username
+viewer.username = "Melchior";
 //output
-console.log(`Username: ${viewer.username}. Role: ${viewer.stateYourRole()}`);
+console.log("Username: ", viewer.username);
+console.log("Role: ", viewer.stateYourRole());

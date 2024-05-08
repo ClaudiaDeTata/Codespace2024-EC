@@ -20,10 +20,10 @@ with the username instead of XXX.
 // inheritance 
 // class creation
 class User {
-  // property username added to User
-  constructor(username) {
-    // initializing the username property
-    this.username = username;
+  // class constructor
+  constructor() {
+    // initializing variables
+    this._username = "";
   }
 
   // getter method to retrieve the value of username
@@ -37,21 +37,33 @@ class User {
   }
 };
 
-// defining class Admin that inherits User
+// defining class Admin that inherits from User
 class Admin extends User {
-  // method ovverride
-  expressYourRole() {
-    console.log("Admin");
-  };
-  sayHello() {
-    console.log("Hello admin,", this.username);
-   }
-};
+  // class constructor
+  constructor() {
+    // call super class constructor
+    super(); // if we had passed a value into the constructor, we should pass it on the super as well
+  }
+
+// method
+expressYourRole() {
+  return "Admin";
+} 
+
+// method
+sayHello() {
+  // calling the super class get method
+  return `Hello admin, ${this.username}`;
+ }
+}
 
 // object admin creation and setting the name of the user
-const admin = new Admin("Balthazar");
+const admin = new Admin();
 
-// method invocation
-admin.sayHello();
+// set username
+admin.username = "Balthazar";
+
+// output
+console.log(admin.sayHello());
 
 
