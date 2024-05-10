@@ -1,10 +1,36 @@
-/* In this challenge, create a variable $age is set the value. 
-Next create a script that checks the value of $age and displays a message based on the age group it falls into:
--  If the value of $age is less than 13, it displays "You are a child."
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Else Statement</title>
+</head>
+<body>
+  
+<form action="" method="post">
+  Enter a number: <input type="number" name="age"><br>
+  <input type="submit" value="How old are you?">
+</form>
+<p id="result"></p>
 
--  If the value of $age is between 13 and 17, it displays "You are a teenager."
+<?php
+// checking if the value has been submitted
+if(isset($_POST['age'])) {
+  // retrieving the value
+  $age = $_POST['age'];
 
-- If the value of $age is between 18 and 64, it displays "You are an adult."
+if ( $age < 13 ) {
+  $result = 'You are a child.';
+} elseif ( $age >= 13 && $age <=17 ) {
+  $result = 'You are a teenager.';
+} elseif ( $age >=18 && $age <=64 ) {
+  $result = 'You are an adult.';
+} else 
+  $result = 'You are a senior citizen.' ;
 
--  If none of the above conditions are met, it displays "You are a senior citizen." */
+  echo $result;
+}
+?>
 
+</body>
+</html>

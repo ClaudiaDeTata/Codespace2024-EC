@@ -20,9 +20,7 @@ Output
       // array definition
       $vowels = array ("a", "e", "i", "o", "u", "A", "E", "I", "O", "U");
       // str_replace() function
-      $result = str_replace($vowels,"x", $str);
-      // return output
-      return $result;
+      return str_replace($vowels,"x", $str);
      }  
      
      // return initial string 

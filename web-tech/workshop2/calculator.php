@@ -9,39 +9,56 @@
 </head>
 <body>
   <h1>Calculator</h1>
-  <form name="form1" id="form1" action="">
+  <form name="form1" id="form1" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
   <label for="calc">Enter the first number: </label>
-    <input type="number" id="calc" name="calc" value=""><br>
+    <input type="number" id="calc" name="number1" value=""><br>
     <br>
- <label for="fname">Enter the second number: </label>
-    <input type="number" id="calc" name="calc" value=""> 
+ <label for="calc">Enter the second number: </label>
+    <input type="number" id="calc" name="number2" value=""> 
     <br>
-    <p>Select an operation: <select name="subject" id="subject"></p>
-      <option value="addition">Addition (+)
-        <?php
-
-        $number1 = "";
-        $number2 = "";
-        $sum = $number1 + $number2;
-        
-        // echo "Addition of " . $number1 . " and " . $number2 . " is: " . $sum; 
-        
-        ?></option>
-      <option value="subtraction">Subtraction (-)</option>
-      <option value="multiplication">Multiplication (*)</option>
-      <option value="division">Division (/)</option>
-         </select>
-             </form>
-  <button id="calculateResult">Calculate</button>
+    <p>Select an operation: <select name="operation" id="operation">
+        <option value="addition">Addition (+)</option>
+        <option value="subtraction">Subtraction (-)</option>
+        <option value="multiplication">Multiplication (*)</option>
+        <option value="division">Division (/)</option>  
+      </select>
+    </p>
+    <input type="submit" name="calculate" value="Calculate">
+  </form>       
   <p id="result"></p>
-  <?php
-  
-// Check if the form has been submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["addText"])) {
-    // Add the line of text
-    echo "<p>This is a new line of text added with PHP.</p>";
-}
 
+  <?php
+  // Check if form has been submitted
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      // Retrieve the numbers from the form
+      $number1 = $_POST['number1'];
+      $number2 = $_POST['number2'];
+      $operation = $_POST['operation'];
+      
+      // Perform the calculation based on the selected operation
+      switch($operation) {
+        case 'addition':
+            $result = $number1 + $number2;
+            break;
+        case 'subtraction':
+            $result = $number1 - $number2;
+            break;
+        case 'multiplication':
+            $result = $number1 * $number2;
+            break;
+        case 'division':
+            if ($number2 != 0) {
+                $result = $number1 / $number2;
+            } else {
+                $result = 'Cannot divide by zero';
+            }
+            break;
+        default:
+            $result = 'Invalid operation';
+  }
+  // Display the result
+  echo "Result: " . $result;
+}
 ?>
 </body>
 </html>
