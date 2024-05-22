@@ -14,15 +14,15 @@
     <body>
       <!-- Buttons -->
       <div class="choices">
-          <button id="rock">Rock</button>
-          <button id="paper">Paper</button>
-          <button id="scissors">Scissors</button>
+          <button data-cy="rock" id="rock">Rock</button>
+          <button data-cy="paper" id="paper">Paper</button>
+          <button data-cy="scissors" id="scissors">Scissors</button>
       </div>
       <br> 
         
-          <h2>Your Choice: <span id="user-choice"></span></h2>
-          <h2>Computer Choice: <span id="computer-choice"></span></h2>
-          <h2>Result: <span id="result"></span></h2>
+          <h2>Your Choice: <span data-cy="user-option" id="user-choice"></span></h2>
+          <h2>Computer Choice: <span data-cy="computer-option" id="computer-choice"></span></h2>
+          <h2>Result: <span data-cy="result" id="result"></span></h2>
         
 
       <script>
@@ -85,9 +85,9 @@
             else if (userChoice === "scissors" && computerChoice === "paper") {
               resultSpan.innerHTML = "you win!"
             } 
-            // user loose
+            // user lose
             else {
-              resultSpan.innerHTML = "you loose!"
+              resultSpan.innerHTML = "you lose!"
             }
           };
           
