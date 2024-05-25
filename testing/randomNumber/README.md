@@ -14,7 +14,6 @@ This has been done, considering that with Java Script, variables can be easily u
 
 2. Random Number Generation with checkGuess() Function:
 A function called checkGuess() has been declared, its purpose is to generate a random integer number and check this number against the user's guess.
-
 To make sure the number has both this characteristics, I have used two built-in JS methods:
 - Math.random() that returns a random floating-point number between 0 and 1;
 - Math.floor() which returns an integer number rounding up the floating-point number resulted from Math.random.
