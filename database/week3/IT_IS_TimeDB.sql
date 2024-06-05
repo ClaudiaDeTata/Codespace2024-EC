@@ -76,13 +76,13 @@ CREATE TABLE Reviews (
 );
 
 
-INSERT INTO Customers (CustomerID, FirstName, LastName, Email, Password, PhoneNumber, AddressLine1, AddressLine2, City, State, ZipCode, Country, RegistrationDate)
+INSERT INTO Customers (CustomerID, FirstName, LastName, Email, Password, PhoneNumber, Address, City, State, Postcode, Country, RegistrationDate)
 VALUES 
-('Cust001', 'John', 'Doe', 'john.doe@example.com', 'EncryptedPassword1', '+441314567890', '1 Princes St', 'Apt 1', 'Edinburgh', 'Midlothian', 'EH2 2EQ', 'United Kingdom', '2024-05-01 14:30'),
-('Cust002', 'Jane', 'Smith', 'jane.smith@example.com', 'EncryptedPassword2', '+441314567891', '2 George St', 'Suite 2', 'Edinburgh', 'Midlothian', 'EH2 3BU', 'United Kingdom', '2024-05-02 10:20'),
-('Cust003', 'James', 'Brown', 'james.brown@example.com', 'EncryptedPassword3', '+441314567892', '3 Royal Mile', 'Flat 3', 'Edinburgh', 'Midlothian', 'EH1 1QS', 'United Kingdom', '2024-05-03 12:45'),
-('Cust004', 'Emily', 'Davis', 'emily.davis@example.com', 'EncryptedPassword4', '+441314567893', '4 Queen St', '', 'Edinburgh', 'Midlothian', 'EH2 1JE', 'United Kingdom', '2024-05-04 15:50'),
-('Cust005', 'Michael', 'Wilson', 'michael.wilson@example.com', 'EncryptedPassword5', '+441314567894', '5 Castlehill', 'Room 5', 'Edinburgh', 'Midlothian', 'EH1 2NG', 'United Kingdom', '2024-05-05 09:15');
+('Cust001', 'John', 'Doe', 'john.doe@example.com', 'EncryptedPassword1', '+441314567890', '1 Princes St, Apt 1', 'Edinburgh', 'Midlothian', 'EH2 2EQ', 'United Kingdom', '2024-05-01 14:30'),
+('Cust002', 'Jane', 'Smith', 'jane.smith@example.com', 'EncryptedPassword2', '+441314567891', '2 George St, Suite 2', 'Edinburgh', 'Midlothian', 'EH2 3BU', 'United Kingdom', '2024-05-02 10:20'),
+('Cust003', 'James', 'Brown', 'james.brown@example.com', 'EncryptedPassword3', '+441314567892', '3 Royal Mile, Flat 3', 'Edinburgh', 'Midlothian', 'EH1 1QS', 'United Kingdom', '2024-05-03 12:45'),
+('Cust004', 'Emily', 'Davis', 'emily.davis@example.com', 'EncryptedPassword4', '+441314567893', '4 Queen St', 'Edinburgh', 'Midlothian', 'EH2 1JE', 'United Kingdom', '2024-05-04 15:50'),
+('Cust005', 'Michael', 'Wilson', 'michael.wilson@example.com', 'EncryptedPassword5', '+441314567894', '5 Castlehill, Room 5', 'Edinburgh', 'Midlothian', 'EH1 2NG', 'United Kingdom', '2024-05-05 09:15');
 
 INSERT INTO ProductCategories (CategoryID, CategoryName, CategoryDescription)
 VALUES 
