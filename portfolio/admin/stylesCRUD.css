@@ -1,0 +1,22 @@
+/* buttons style */
+
+.btn.btn-dark {
+  border-radius: 0 50px 0 50px;
+}
+
+.btn-outline-dark {
+  border-radius: 0 50px 0 50px;
+}
+
+.btn.btn-outline-dark {
+  border-radius: 50px 0 50px 0;
+}
+
+
+
+
+
+
+
+
+

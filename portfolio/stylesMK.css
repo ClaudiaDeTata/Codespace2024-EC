@@ -1,0 +1,32 @@
+/* buttons*/
+
+.btn.btn-dark {
+  border-radius: 0 50px 0 50px;
+}
+
+.btn-outline-dark.btn-lg {
+  border-radius: 0 50px 0 50px;
+}
+
+.btn.btn-outline-dark {
+  border-radius: 50px 0 50px 0;
+}
+
+/*cart */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+
+
+
+
+
+
