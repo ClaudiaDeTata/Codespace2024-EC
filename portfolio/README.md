@@ -67,6 +67,6 @@ During this course, I learned how to successfully work on the backend side of we
 
 This project serves as my 'business card' for my approach to the Tech industry. While I will continue to perfect it and add features, alongside my learning path expanding towards further languages, I am very satisfied with my final result as not even one year ago, I could not even understand the meaning of opening and closing tags.
 
-I finish this course feeling very satisfied with the support and the knowledge transmitted by my teachers and classmates, and with a newfound confidence in my abilities in software development, I am eager to continue creating and experimentig further on my journey into this world.
+I finish this course feeling very satisfied with the support and the knowledge transmitted by my teachers and classmates, and with a newfound confidence in my abilities in software development, I am eager to continue creating and experimenting further on my journey into this world.
 
 
