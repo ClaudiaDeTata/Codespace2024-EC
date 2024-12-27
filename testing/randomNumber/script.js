@@ -18,7 +18,7 @@ function checkGuess() {
 
 // if statement checking the three possibilities and printing final result    
 if ( guess === randomNum ) {
-   result.textContent = `You answered ${guess}. This is the correct answer!` 
+   result.textContent = `You answered ${guess}. This is the correct answer! 🎉` 
 } else if ( guess > randomNum ) {
    result.textContent = `You answered ${guess}. The correct answer is lower.`
  } else {

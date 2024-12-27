@@ -1,16 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 body {
+  padding: 10px;
+  font-family: "Rubik Mono One", serif !important;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1vw; 
+  background: radial-gradient(circle at center, #66ff00, #a80077); 
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
   text-align: center;
-  padding: 50px;
-  font-family: 'Segoe Script', cursive;
-  font-size: 20px;
+  min-height: 100vh;
 }
 
-h1 {
+#container {
+  display: block;
+  border: 5px solid black;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #a80077, #66ff00); 
+  margin-right: auto;
+  margin-left: auto;
+  padding: 30px; 
+  height: 85vw;
+  width: 85vw;
+  max-width: 500px;
+  max-height: 500px;
+  text-shadow: 1px 1px black;
+}
+
+#container:hover {
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFgvhCCun_a-JLP-PR1QR42Pk7JQzuT_SFZA&s);
+  background-repeat:no-repeat;
+  background-size: cover;
+  border: 2px solid white;
+  border-radius: 50%;
+  font-size: 1.5vw;
+  color: white;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  height: 85vw;
+  width: 85vw;
+  max-width: 700px;
+  max-height: 700px;
+  text-shadow: 2px 2px black;
+}
+
+.col-6 {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.message {
   color: rgb(187, 24, 219);
 }
 
-button {
-  border-radius: 20%;
+#guess-btn {
+  border-radius: 20px 20px;
   color:rgb(155, 0, 134);
 }
 
@@ -18,4 +69,127 @@ button {
   width: 250px;
   height: 40px;
   text-align: center;
+}
+
+#guessInput:hover {
+  width: 400px;
+  height: 80px;
+  text-align: center;
+}
+
+.scrolling-numbers-left {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: bold;
+  animation: slideleft 15s ease-out infinite;
+  color:#66ff00;
+}
+
+.scrolling-numbers-right {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  font-size: 2rem;
+  font-weight: bold;
+  animation: slideright 15s ease-out infinite;
+  color:#66ff00;
+}
+
+.scrolling-numbers-left:hover {
+  font-size: 50px;
+  color:rgb(155, 0, 134);
+}
+
+.scrolling-numbers-right:hover {
+  font-size: 50px;
+  color:rgb(155, 0, 134);
+}
+
+@keyframes slideleft {
+  0% {
+      transform: translate(-50px, 50px);
+  }
+  25% {
+      transform: translateY(360px);
+  }
+  50% {
+    transform: translateY(100px);
+  } 
+  75% {
+    transform: rotate(-180deg);
+  } 
+  100% {
+    transform: rotate(-360deg);
+  } 
+}
+
+@keyframes slideright {
+  0% {
+      transform: translate(50px, -50px);
+  }
+  25% {
+      transform: translateY(-360px);
+  } 
+  50% {
+    transform: translateY(-100px);
+  } 
+  75% {
+    transform: rotate(180deg);
+  } 
+  100% {
+    transform: rotate(360deg);
+  } 
+}
+
+@media only screen and (max-width: 970px) {
+  body {
+    font-size: 1.2vw;
+  }
+  
+  #container{
+    height: 105vw;
+    width: 105vw;
+  }
+
+  #container:hover {
+    font-size: 1.2vw;
+    height: 85vw;
+    width: 85vw;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  body {
+    font-size: 1.4vw;
+  }
+  
+  #container{
+    height: 85vw;
+    width: 85vw;
+  }
+
+  #container:hover {
+    font-size: 1.4vw;
+    height: 85vw;
+    width: 85vw;
+  }
+}
+
+  @media only screen and (max-width: 695px) {
+    body {
+      font-size: 1.4vw;
+    }
+    
+    #container{
+      height: 85vw;
+      width: 85vw;
+    }
+  
+    #container:hover {
+      font-size: 1.4vw;
+      height: 85vw;
+      width: 85vw;
+    }
 }
