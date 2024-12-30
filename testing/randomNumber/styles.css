@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 body {
   padding: 10px;
-  font-family: "Rubik Mono One", serif !important;
-  font-weight: 300;
-  font-style: normal;
-  font-size: 1vw; 
   background: radial-gradient(circle at center, #66ff00, #a80077); 
   margin: 0;
   padding: 0;
@@ -16,12 +12,15 @@ body {
 }
 
 #container {
-  display: block;
-  border: 5px solid black;
+  display: flex;
+  border: 5px solid white;
   border-radius: 50%;
   background: radial-gradient(circle at center, #a80077, #66ff00); 
   margin-right: auto;
   margin-left: auto;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
   padding: 30px; 
   height: 85vw;
   width: 85vw;
@@ -57,24 +56,28 @@ body {
 }
 
 .message {
+  font-family: "Rubik Mono One", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5vw; 
   color: rgb(187, 24, 219);
 }
 
 #guess-btn {
+  font-family: "Verdana", serif;
+  font-size: 1.2vw; 
   border-radius: 20px 20px;
   color:rgb(155, 0, 134);
+  width: 250px;
+  margin-top: -20px;
 }
 
 #guessInput {
+  font-family: "Verdana", serif;
   width: 250px;
   height: 40px;
   text-align: center;
-}
-
-#guessInput:hover {
-  width: 400px;
-  height: 80px;
-  text-align: center;
+  font-size: 0.8vw;
 }
 
 .scrolling-numbers-left {
@@ -144,52 +147,75 @@ body {
 }
 
 @media only screen and (max-width: 970px) {
-  body {
-    font-size: 1.2vw;
-  }
-  
   #container{
     height: 105vw;
     width: 105vw;
   }
 
   #container:hover {
-    font-size: 1.2vw;
     height: 85vw;
     width: 85vw;
+  }
+
+  .message, .instruction, #result {
+    font-size: 1.8vw;
+  }
+
+  #guess-btn {
+    font-size: 1.8vw;  
+    width: 250px;
+    height: 40px;
+  }
+  
+  #guessInput {
+    font-size: 1.8vw; 
   }
 }
 
 @media only screen and (max-width: 740px) {
-  body {
-    font-size: 1.4vw;
-  }
-  
   #container{
     height: 85vw;
     width: 85vw;
   }
 
   #container:hover {
-    font-size: 1.4vw;
     height: 85vw;
     width: 85vw;
+  }
+
+  .message, .instruction, #result {
+    font-size: 1.8vw;
+  }
+
+  #guess-btn {
+    font-size: 1.8vw;  
+  }
+  
+  #guessInput {
+    font-size: 1.8vw; 
   }
 }
 
   @media only screen and (max-width: 695px) {
-    body {
-      font-size: 1.4vw;
-    }
-    
     #container{
       height: 85vw;
       width: 85vw;
     }
   
     #container:hover {
-      font-size: 1.4vw;
       height: 85vw;
       width: 85vw;
+    }
+
+    .message, .instruction, #result {
+      font-size: 3vw;
+    }
+  
+    #guess-btn {
+      font-size: 3vw;  
+    }
+    
+    #guessInput {
+      font-size: 3vw; 
     }
 }
